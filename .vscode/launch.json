@@ -1,0 +1,23 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "(Windows) Launch",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "${command:cmake.launchTargetPath}",
+            //"args": ["h:/datasets/twinner/calibration/2021-10-29-09-06-48_00002_Camera_3.h264"],
+            "args": ["-w=8", "-h=5", "-o=camera_intrinsics.yaml", "-d=1", "-su", "-V",
+                //"h:/datasets/twinner/calibration/Camera_3/%05d.jpg"
+                "h:/datasets/twinner/calibration/Camera_1/%05d.jpg"
+            ],
+            "stopAtEntry": false,
+            "cwd": "${workspaceFolder}",
+            "environment": [],
+            "console": "externalTerminal"
+        }
+    ]
+}
